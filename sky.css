@@ -1,0 +1,154 @@
+body {
+  background-image: linear-gradient(to top,rgb(18, 4, 98), rgb(75, 44, 126), rgb(0, 0, 0));
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.sky {
+  position: relative;
+}
+.mymoon {
+  position: absolute;
+  right: 4%;
+  z-index: -1;
+}
+.star-1 {
+  position: absolute;
+  background-color: #FFFDFD;
+  width: 5px;
+  height: 5px;
+  top: 20%;
+  right: 40%;
+  border-radius: 50%;
+  box-shadow: 0 0 1px 1px #FFFDFD,
+    -70px 150px 1px 0 #FFFDFD,
+    290px 150px 1px -1px #0F00BF,
+    -90px 100px 1px -1px #0C5DCC,
+    270px 10px 1px 0.11px #FFFDFD,
+    390px 80px 1px -0.6px #0C5DCC,
+    -30px 120px 3px -1px #0F00BF;
+  animation: pulsate 5s ease;
+  animation-iteration-count: infinite;
+}
+.star-2 {
+  position: absolute;
+  background-color: #FFFF00;
+  width: 5px;
+  height: 5px;
+  top: 20%;
+  right: 15%;
+  border-radius: 50%;
+  box-shadow: 0 0 5px 1px #FFFF00,
+    -99px 30px 1px 0.09px #FFFF00,
+    355px 30px 0.5px 1px #FFFF00,
+    400px -30px 1px -1px #FFFF00,
+    400px 90px 1px -1px #FFFF00,
+    -50px -30px 1px -1px #FFFF00;
+  animation: pulsate 7s ease;
+  animation-iteration-count: infinite;
+}
+.star-3 {
+  position: absolute;
+  background-color: #FFFF00;
+  width: 5px;
+  height: 5px;
+  top: 30%;
+  right: 300%;
+  border-radius: 50%;
+  box-shadow: 0 0 5px 1px #FFFF00,
+    -99px 30px 1px 0.09px #FFFF00,
+    355px 30px 0.5px 1px #FFFF00,
+    400px -30px 1px -1px #FFFF00,
+    400px 90px 1px -1px #FFFF00,
+    -50px -30px 1px -1px #FFFF00;
+  animation: pulsate 7s ease;
+  animation-iteration-count: infinite;
+}
+.star-4 {
+  position: absolute;
+  background-color: #FFFF00;
+  width: 5px;
+  height: 5px;
+  top: 30%;
+  left: 20%;
+  border-radius: 50%;
+  box-shadow: 0 0 5px 1px #FFFF00,
+    -99px 30px 1px 0.09px #FFFF00,
+    355px 30px 0.5px 1px #FFFF00,
+    400px -30px 1px -1px #FFFF00,
+    400px 90px 1px -1px #FFFF00,
+    -50px -30px 1px -1px #FFFF00;
+  animation: pulsate 12s ease;
+  animation-iteration-count: infinite;
+}
+.moon {
+  background-color: rgb(172, 172, 172);
+  position: absolute;
+  right: 90%;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  box-shadow: 5px 0 10px 3px rgba(229, 229, 229, 0.3),
+    0 0 10px 2px rgba(229, 229, 229, 0.3),
+    5px 0 10px 3px rgba(229, 229, 229, 0.3),
+    0px 0 3px 2px rgba(229, 229, 229, 0.3);
+  animation: moonanim 70s infinite;
+}
+@keyframes moonanim {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg); }
+}
+.moon::after {
+  content: "";
+  background-color: rgba(162, 162, 162, 0.81);
+  display: block;
+  position: absolute;
+  left: 55%;
+  top: 35%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  box-shadow: 30px 0 0 1px rgba(98, 98, 98, 0.51),
+    7px 45px 0 -5px rgba(162, 162, 162, 0.9),
+    9px 45px 0 -5px rgba(100, 100, 100, 0.51),
+    35px 20px 0 -10px rgba(162, 162, 162, 0.9),
+    37px 20px 0 -10px rgba(100, 100, 100, 0.51);
+}
+@keyframes pulsate {
+  0% { opacity: 0.0;}
+  50% { opacity: 1.0; }
+  100% { opacity: 0.0; }
+}
+.meteor{
+  position: absolute;
+  background-color: #b7f900;
+  box-shadow:  0 0 5px 1px #FFFDFD,
+  -99px 30px 1px 0.09px #FFFF00;
+  width: 5px;
+  height: 5px;
+  top: 30%;
+  left: 20%;
+  border-radius: 50%;
+  animation: meteor 5s infinite ease ;
+}
+@keyframes meteor {
+  0% {top:-20px; left:20% ;}
+100%{top:300px ; left :130%;}
+}
+.meteor1{
+  position: absolute;
+  background-color: #ff9900;
+  box-shadow:  0 0 5px 1px #FFFDFD;
+  width: 5px;
+  height: 5px;
+  left: 0%;
+  bottom: 0%;
+  border-radius: 50%;
+  animation: meteor1 4s infinite ease ;
+}
+@keyframes meteor1 {
+  0% {top:-40px; left:40% ;}
+100%{top:400px ; left :140%;}
+}
